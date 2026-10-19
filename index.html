@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAC Miracle Centre South Exchange | Christ Apostolic Church</title>
+<meta name="description" content="Christ Apostolic Church Miracle Centre South Exchange is a Spirit-filled, Word-grounded congregation committed to worship, discipleship, and the gospel of Jesus Christ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#183875;
+    --blue-dark:#102954;
+    --blue-soft:#f2f5fa;
+    --yellow:#e8b84b;
+    --yellow-soft:#fbf5e8;
+    --white:#ffffff;
+    --ink:#16203d;
+    --muted:#55607f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito Sans',Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Lora',Georgia,serif;line-height:1.2}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1100px,92%);margin-inline:auto}
+  :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:var(--blue);box-shadow:0 3px 14px rgba(16,41,84,.14)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+  .brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;border:2px solid var(--yellow)}
+  .brand span{font-family:'Lora',serif;font-weight:700;font-size:1.05rem;line-height:1.15}
+  .brand small{display:block;font-family:'Nunito Sans',sans-serif;font-weight:400;font-size:.78rem;color:var(--yellow)}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav a{color:var(--white);text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
+  nav a:hover{border-color:var(--yellow)}
+  .menu-btn{display:none;background:none;border:2px solid var(--yellow);color:var(--white);border-radius:8px;padding:6px 12px;font-size:1rem;cursor:pointer}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);color:var(--white);padding:84px 0;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-100px;top:-190px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:10px}
+  .hero h1 em{font-style:normal;color:var(--yellow)}
+  .verse{display:inline-block;color:#f5d991;font-weight:700;padding:0;margin-bottom:18px;letter-spacing:.12em;text-transform:uppercase;font-size:.83rem}
+  .hero p{max-width:52ch;color:#e0e7f2;margin-bottom:28px;font-size:1.08rem}
+  .btns{display:flex;flex-wrap:wrap;gap:14px}
+  .btns-centered{justify-content:center}
+  .btn{display:inline-block;padding:13px 26px;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
+  .btn-yellow{background:var(--yellow);color:var(--blue-dark)}
+  .btn-yellow:hover{background:#ffd95c;transform:translateY(-2px)}
+  .btn-outline{border:2px solid var(--white);color:var(--white)}
+  .btn-outline:hover{background:var(--white);color:var(--blue)}
+  .btn-outline-dark{border:2px solid var(--blue);color:var(--blue)}
+  .btn-outline-dark:hover{background:var(--blue);color:var(--white)}
+  .welcome-card{background:#fff;color:var(--ink);padding:42px;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.2);border-top:5px solid var(--yellow)}
+  .welcome-card .eyebrow{color:var(--blue);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+  .welcome-card blockquote{font-family:'Lora',serif;font-size:1.65rem;line-height:1.45;margin:20px 0;color:var(--blue-dark)}
+  .welcome-card cite{font-style:normal;color:var(--muted);font-weight:700}
+
+  /* Sections */
+  section{padding:80px 0}
+  .title{text-align:center;margin-bottom:46px}
+  .title h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--blue)}
+  .title .bar{width:54px;height:3px;background:var(--yellow);margin:14px auto 0;border-radius:3px}
+  .title p{color:var(--muted);margin-top:14px}
+
+  /* Welcome */
+  .about{max-width:800px}
+  .about h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--blue);margin-bottom:18px}
+  .about .role{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;margin-bottom:12px}
+  .about p{margin-bottom:14px}
+  .contact-chip{display:inline-flex;align-items:center;gap:10px;background:var(--blue-soft);color:var(--blue);padding:10px 18px;border-radius:999px;font-weight:700;text-decoration:none;margin-top:8px}
+
+  /* Announcements */
+  .announcements{background:var(--blue-soft)}
+  .announcement-card{max-width:820px;margin-inline:auto;padding:30px 34px;background:var(--white);border-left:4px solid var(--yellow);border-radius:0 10px 10px 0;box-shadow:0 10px 28px rgba(16,41,84,.06)}
+  .announcement-date{display:inline-block;margin-bottom:18px;color:var(--blue);font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .announcement-card p{margin-bottom:14px}
+  .announcement-card h3{color:var(--blue);font-size:1.15rem;margin:22px 0 8px}
+  .announcement-card ul{padding-left:22px}
+  .announcement-card li{padding-left:4px;margin-bottom:10px}
+  .announcement-card li:last-child{margin-bottom:0}
+  .social-icon{width:22px;height:22px;vertical-align:middle;margin-right:6px}
+  @media (max-width:600px){.announcement-card{padding:24px 22px}}
+
+  /* Services */
+  .services{background:var(--blue-soft)}
+  .service-grid,.doctrine-grid,.teaching-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .service-card,.doctrine-card,.teaching-card{background:var(--white);padding:26px;border-radius:12px;border:1px solid #e2e8f1;box-shadow:0 10px 26px rgba(16,41,84,.05)}
+  .service-card h3,.doctrine-card h3,.teaching-card h3{color:var(--blue);font-size:1.2rem;margin:6px 0 10px}
+  .service-card p,.doctrine-card p,.teaching-card p{color:var(--muted);margin-bottom:10px}
+  .giving{background:var(--white)}
+  .giving-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .giving-card{background:var(--blue-soft);padding:26px;border-radius:12px;border-top:4px solid var(--yellow)}
+  .giving-card h3{color:var(--blue);font-size:1.2rem;margin-bottom:12px}
+  .giving-card p{margin-bottom:10px}
+  .giving-card a{color:var(--blue);font-weight:700}
+  .giving-thanks{margin:28px auto 0;text-align:center;color:var(--muted);font-family:'Lora',Georgia,serif;font-size:1.2rem}
+  .service-frequency{color:var(--blue);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .service-time{display:block;color:var(--blue-dark);font-weight:700;margin-bottom:10px}
+  .detail-link,.teaching-card a{color:var(--blue);font-weight:700}
+  .service-note{margin-top:24px;text-align:center;color:var(--muted)}
+
+  /* Beliefs */
+  .doctrine-card{border-top:4px solid var(--yellow)}
+
+  /* Pastor and teachings */
+  .pastor{max-width:850px;margin-inline:auto;background:var(--blue-soft);padding:34px;border-radius:14px}
+  .pastor h3{color:var(--blue);font-size:1.55rem;margin:8px 0}
+  .pastor .role{color:var(--muted);font-weight:700}
+  .pastor p{margin:14px 0}
+  .teachings{background:var(--blue-soft)}
+  .teaching-card{display:flex;flex-direction:column;align-items:flex-start}
+  .teaching-card a{margin-top:auto}
+  .teaching-card .reading-time{font-size:.9rem;color:var(--muted);margin-top:8px}
+
+  /* Verse banner */
+  .banner{background:var(--blue);color:var(--white);text-align:center;padding:70px 0}
+  .banner blockquote{font-family:'Lora',serif;font-size:clamp(1.3rem,3vw,1.9rem);max-width:30em;margin:0 auto 12px}
+  .banner cite{color:var(--yellow);font-style:normal;font-weight:700}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .info{display:grid;gap:18px}
+  .info-item{display:flex;gap:16px;align-items:center;padding:20px;border-radius:10px;background:var(--blue-soft);text-decoration:none}
+  .icon{flex:none;width:50px;height:50px;border-radius:50%;background:var(--blue);color:var(--yellow);display:grid;place-items:center;font-size:1.3rem}
+  .info-item b{display:block;color:var(--blue)}
+  .info-item span{color:var(--muted);word-break:break-word}
+  .address-panel{background:var(--blue-soft);padding:24px;border-radius:10px}
+  .address-panel h3{color:var(--blue);margin-bottom:8px}
+  .address-panel p{margin-bottom:8px}
+  .address-panel a{color:var(--blue);font-weight:700}
+  form{background:var(--white);border:1px solid #dce3ee;border-radius:14px;padding:28px;display:grid;gap:14px;box-shadow:0 12px 34px rgba(16,41,84,.07)}
+  label{font-weight:700;color:var(--blue);font-size:.92rem}
+  input,textarea,select{width:100%;padding:12px 14px;border:2px solid #c6d2f5;border-radius:8px;font:inherit;margin-top:4px;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus,select:focus{border-color:var(--blue);outline:none}
+  textarea{min-height:120px;resize:vertical}
+  form button{border:none;cursor:pointer;font:inherit;font-weight:700}
+
+  footer{background:var(--blue-dark);color:#c7d3ff;text-align:center;padding:34px 0;border-top:6px solid var(--yellow);font-size:.95rem}
+  footer b{color:var(--yellow)}
+
+  /* Mobile */
+  @media (max-width:980px){
+    .hero-grid,.about,.contact-grid{grid-template-columns:1fr}
+    .welcome-card{padding:30px}
+    .menu-btn{display:block}
+    nav{position:absolute;top:100%;left:0;right:0;background:var(--blue-dark);display:none;border-bottom:4px solid var(--yellow)}
+    nav.open{display:block}
+    nav ul{flex-direction:column;gap:0;padding:10px 4%}
+    nav a{display:block;padding:12px 0}
+    section{padding:60px 0}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <img src="logo.png" alt="Christ Apostolic Church logo">
+      <span>CAC Miracle Centre<small>South Exchange · One Fold, One Shepherd</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#welcome">Who We Are</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#giving">Tithes &amp; Offerings</a></li>
+        <li><a href="#beliefs">Our Doctrine</a></li>
+        <li><a href="#pastor">Pastor</a></li>
+        <li><a href="#teachings">Teachings</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="verse">Welcome to our church</span>
+      <h1>CAC <em>Miracle Centre</em></h1>
+      <p>A vibrant, Spirit-filled congregation rooted in faith and love. Join us for worship, prayer, and the full gospel of Jesus Christ at South Exchange.</p>
+      <div class="btns">
+        <a class="btn btn-yellow" href="#services">Gather with us</a>
+        <a class="btn btn-outline" href="tel:+13126674791">Call us</a>
+      </div>
+    </div>
+    <div class="welcome-card">
+      <span class="eyebrow">One fold, one Shepherd</span>
+      <blockquote>“There shall be one fold, and one shepherd.”</blockquote>
+      <cite>John 10:16</cite>
+    </div>
+  </div>
+</section>
+
+<section id="welcome">
+  <div class="wrap about">
+    <p class="role">Who we are</p>
+    <h2>A family rooted in faith &amp; love</h2>
+    <p>Christ Apostolic Church (CAC) Miracle Centre is a vibrant, Spirit-filled congregation that believes in the full gospel of Jesus Christ — His power to save, heal, deliver, and transform every life.</p>
+    <p>We are part of the Christ Apostolic Church, a movement rooted in the Aladura revival of faith — a tradition of fervent prayer, dependence on the Holy Spirit, and unwavering commitment to the Word of God.</p>
+    <p>At Miracle Centre, sound biblical doctrine, passionate worship, and genuine community come together. No matter who you are or where you have been, you are welcome here.</p>
+  </div>
+</section>
+
+<section class="announcements" id="announcements">
+  <div class="wrap">
+    <div class="title">
+      <h2>Church announcements</h2>
+      <div class="bar"></div>
+      <p>News and updates from our church family.</p>
+    </div>
+    <article class="announcement-card">
+      <time class="announcement-date" datetime="2026-10-18">October 18, 2026</time>
+      <p>Glory and power unto our God, the giver of every good and perfect gift. We say, “Thank You, Lord!”</p>
+      <p>We thank God for His faithfulness and goodness in our lives and in our families.</p>
+      <p>Today, we join the family of Mr. Bamidele Oni in celebrating their special family testimonies and thanksgiving. We rejoice with them.</p>
+      <h3>Food Pantry</h3>
+      <p>The October Food Pantry will take place on Saturday, October 24. All volunteers are kindly asked to stay after today’s service.</p>
+      <h3>Meeting with Daddy</h3>
+      <p>All ministers (Pastors and Evangelists) will meet with Daddy today after service.</p>
+      <h3>From the Anniversary Committee</h3>
+      <ul>
+        <li>Send your messages, greetings, and felicitations for the anniversary brochure, as well as messages for the corporate advertisement.</li>
+        <li>All departments and groups should forward their messages.</li>
+        <li>Please submit all messages within the next two weeks for compilation.</li>
+        <li>If you need a letter of invitation for a corporate body, please see the committee secretary.</li>
+      </ul>
+      <p>Please use the anniversary invitation to invite your friends, co-workers, and family to celebrate with us.</p>
+      <h3>Birthday celebrations</h3>
+      <p>This week, we rejoice with our brethren celebrating birthdays:</p>
+      <ul>
+        <li>Sunday, October 18: Sister Deborah Hassan</li>
+        <li>Monday, October 19: Mr. Olayinka Okusanya</li>
+        <li>Wednesday, October 21: Mrs. Temitope Banjo and McKenzie Adegunju</li>
+        <li>Saturday, October 24: Pastor Olusegun Aina Solomon</li>
+      </ul>
+      <p>Happy birthday to you all, and many happy returns in Christ Jesus’ name.</p>
+      <h3>Upcoming events</h3>
+      <ul>
+        <li><strong>CACMA October Vigil:</strong> Friday, October 30, from 11:00 p.m. to 1:00 a.m.</li>
+        <li><strong>Special Thanksgiving:</strong> We pray for and support our Mama, Matron Margret Omodara, as she prepares for her special thanksgiving on November 8, 2026.</li>
+        <li><strong>Church Anniversary:</strong> Sunday, November 15. CAC Miracle Center South Exchange, let us prepare spiritually, physically, and financially for the anniversary. It shall be a glorious day in Jesus’ name.</li>
+      </ul>
+      <h3>Weekly gatherings</h3>
+      <ul>
+        <li><strong>Daily prayer line:</strong> Monday to Friday, 7:00–8:00 p.m. Join us and send in your prayer requests.</li>
+        <li><strong>Bible study:</strong> Wednesdays on Zoom, 7:00–8:30 p.m. Invite your friends and family to join us as we learn and grow in understanding.</li>
+        <li><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="#ff0033"/><path d="M10 9v6l5-3z" fill="#fff"/></svg><strong>YouTube live stream:</strong> Join us live on YouTube at <a href="https://www.youtube.com/@cacsouthexchange" target="_blank" rel="noopener noreferrer">@cacsouthexchange</a>.</li>
+        <li><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="instagramGradient" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd776"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#833ab4"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#instagramGradient)" stroke-width="2.5"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#instagramGradient)" stroke-width="2.2"/><circle cx="17.8" cy="6.5" r="1.35" fill="#e1306c"/></svg><strong>Instagram:</strong> Follow us at <a href="https://www.instagram.com/cacsouthexchange_church/" target="_blank" rel="noopener noreferrer">@cacsouthexchange_church</a>.</li>
+      </ul>
+      <h3>Welcome, newcomers</h3>
+      <p>Welcome to all who are new among us. We love you and would like to get to know you better. Please introduce yourself to us.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="title">
+      <h2>Services &amp; Programmes</h2>
+      <div class="bar"></div>
+      <p>Whether you are joining us for the first time or have been with us for years, there is always a seat for you.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Every Sunday</span>
+        <h3>Sunday Worship Service</h3>
+        <span class="service-time">10:00 a.m. &amp; 1:30 p.m.</span>
+        <p>Our main gathering — Spirit-led praise, heartfelt worship, and expository preaching from the Word of God.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Every Wednesday</span>
+        <h3>Midweek Bible Study</h3>
+        <span class="service-time">6:00 p.m.</span>
+        <p>Deeper study of Scripture in a warm, interactive setting. Come with your Bible and your questions.</p>
+        <a class="detail-link" href="https://zoom.us/j/3476389063" target="_blank" rel="noopener noreferrer">Join on Zoom</a>
+        <p>Password: 8157</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Monday–Friday</span>
+        <h3>Prayer Line</h3>
+        <span class="service-time">7:00–8:00 p.m.</span>
+        <p>A time of corporate prayer and intercession. Join us from anywhere as we seek God’s face together.</p>
+        <p><strong>Phone:</strong> <a class="detail-link" href="tel:+13126674791">+1 (312) 667-4791</a><br><strong>Password:</strong> 362397</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Sundays at 8:00 a.m.</span>
+        <h3>Children &amp; Youth Church</h3>
+        <span class="service-time">Before the main service</span>
+        <p>A dedicated, Bible-centred space for the next generation — age-appropriate and Spirit-led.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Every last Friday</span>
+        <h3>Men’s Night Vigil Prayer Service</h3>
+        <span class="service-time">12:00–1:00 a.m.</span>
+        <p>A night set apart for intercession, spiritual warfare, and waiting on God. All are welcome.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Quarterly</span>
+        <h3>Evangelism &amp; Outreach</h3>
+        <span class="service-time">Dates announced Sundays</span>
+        <p>Taking the gospel beyond these walls — into our neighbourhood and the wider community.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="giving" id="giving">
+  <div class="wrap">
+    <div class="title">
+      <h2>Tithes &amp; Offerings</h2>
+      <div class="bar"></div>
+      <p>Payment instructions for Christ Apostolic Church of Illinois.</p>
+    </div>
+    <div class="giving-grid">
+      <article class="giving-card">
+        <h3>Zelle Quick Pay</h3>
+        <p><strong>Phone:</strong> <a href="tel:+17734034095">773-403-4095</a></p>
+        <p><strong>Email:</strong> <a href="mailto:cacsouthexchange@gmail.com">cacsouthexchange@gmail.com</a></p>
+      </article>
+      <article class="giving-card">
+        <h3>Check Payment</h3>
+        <p>Make checks payable to <strong>Christ Apostolic Church of Illinois</strong>.</p>
+        <p>Please include your name and payment details, such as tithe, offering, Bible study offering, or vow. Drop checks in the church mailbox.</p>
+      </article>
+      <article class="giving-card">
+        <h3>Bulk Payments</h3>
+        <p>Please text <a href="sms:+17734034095">773-403-4095</a> to notify us of bulk payments so we can record them accurately.</p>
+      </article>
+    </div>
+    <p class="giving-thanks">Thank you for your payment. God bless you!</p>
+  </div>
+</section>
+
+<section id="beliefs">
+  <div class="wrap">
+    <div class="title">
+      <p class="role">Our doctrine</p>
+      <h2>What we believe</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="doctrine-grid">
+      <article class="doctrine-card"><h3>The Holy Scriptures</h3><p>The Bible is the inspired, infallible Word of God and the supreme authority for all faith and conduct.</p></article>
+      <article class="doctrine-card"><h3>Salvation in Christ</h3><p>Salvation is by grace through faith in Jesus Christ alone — His death, burial, and resurrection.</p></article>
+      <article class="doctrine-card"><h3>The Holy Spirit</h3><p>We believe in the baptism of the Holy Spirit with evidence, and the gifts of the Spirit active today.</p></article>
+      <article class="doctrine-card"><h3>Divine Healing</h3><p>God still heals today. Healing of body, mind, and spirit is part of the finished work of Christ.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="banner">
+  <div class="wrap">
+    <blockquote>“But seek first the kingdom of God and His righteousness, and all these things will be added to you.”</blockquote>
+    <cite>Matthew 6:33</cite>
+  </div>
+</div>
+
+<section id="pastor">
+  <div class="wrap">
+    <div class="title">
+      <p class="role">Leadership</p>
+      <h2>Our Pastor</h2>
+      <div class="bar"></div>
+    </div>
+    <article class="pastor">
+      <p class="role">Spiritual Leader · CAC Miracle Centre</p>
+      <h3>Dr. Joshua Owoeye</h3>
+      <p>Dr. Joshua Owoeye is the Spiritual Leader of CAC Miracle Centre and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life's work has been teaching the whole counsel of God's Word — with conviction, clarity, and pastoral compassion.</p>
+      <p>His passion is the making of true disciples: believers who are not just spiritually enthusiastic, but deeply grounded in Scripture, holy in character, and effective in service to God and neighbour.</p>
+      <p>Dr. Owoeye is also a prolific author and teacher whose writings on character, holiness, sin, leadership, and church accountability continue to impact lives across Nigeria and in the diaspora.</p>
+      <div class="btns">
+        <a class="btn btn-outline-dark" href="https://cacsemc-website.vercel.app/teachings/" target="_blank" rel="noopener noreferrer">Read his teachings</a>
+        <a class="btn btn-yellow" href="https://cacsemc-website.vercel.app/pastor/" target="_blank" rel="noopener noreferrer">Full biography</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="teachings" id="teachings">
+  <div class="wrap">
+    <div class="title">
+      <p class="role">From the Pastor’s Desk</p>
+      <h2>Recent Teachings</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="teaching-grid">
+      <article class="teaching-card">
+        <h3>Good Behavior Is the Real Beauty of a Person</h3>
+        <span class="reading-time">8 min read</span>
+        <a href="https://cacsemc-website.vercel.app/teachings/" target="_blank" rel="noopener noreferrer">Read teaching</a>
+      </article>
+      <article class="teaching-card">
+        <h3>100 Good Behaviors Called the Will of God</h3>
+        <span class="reading-time">12 min read</span>
+        <a href="https://cacsemc-website.vercel.app/teachings/" target="_blank" rel="noopener noreferrer">Read teaching</a>
+      </article>
+      <article class="teaching-card">
+        <h3>25 Damages Pastors Have Done to the Body of Christ in This Generation</h3>
+        <span class="reading-time">9 min read</span>
+        <a href="https://cacsemc-website.vercel.app/teachings/" target="_blank" rel="noopener noreferrer">Read teaching</a>
+      </article>
+    </div>
+  </div>
+</section>
+ 
+<section id="contact">
+  <div class="wrap">
+    <div class="title">
+      <p class="role">Find us</p>
+      <h2>Come &amp; Visit</h2>
+      <div class="bar"></div>
+      <p>We would love to welcome you to Miracle Centre.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info">
+        <div class="address-panel">
+          <h3>Miracle Centre</h3>
+          <p>8159 S Exchange Ave<br>Chicago, IL, USA</p>
+          <a href="https://maps.google.com/?q=8159+S+Exchange+Ave,+Chicago,+IL" target="_blank" rel="noopener noreferrer">Get directions</a>
+        </div>
+        <a class="info-item" href="tel:+13126674791">
+          <div class="icon">&#9742;</div>
+          <div><b>Phone</b><span>+1 (312) 667-4791</span></div>
+        </a>
+        <a class="info-item" href="mailto:info@cacmiraclecenter.org">
+          <div class="icon">&#9993;</div>
+          <div><b>Email</b><span>info@cacmiraclecenter.org</span></div>
+        </a>
+        <div class="address-panel">
+          <h3>Sunday Services</h3>
+          <p>10:00 a.m. &amp; 1:30 p.m.</p>
+        </div>
+      </div>
+
+      <form id="contactForm">
+        <div><label for="firstName">First name</label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+        <div><label for="lastName">Last name</label><input id="lastName" name="lastName" autocomplete="family-name" required></div>
+        <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div>
+          <label for="reason">Reason for contact</label>
+          <select id="reason" name="reason" required>
+            <option value="" selected disabled>Select a reason…</option>
+            <option>Planning a visit</option>
+            <option>Prayer request</option>
+            <option>General enquiry</option>
+            <option>Speaking / ministry invitation</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div><label for="msg">Message</label><textarea id="msg" name="message" required></textarea></div>
+        <button class="btn btn-yellow" type="submit">Send message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="teachings" id="stay-connected">
+  <div class="wrap">
+    <div class="title">
+      <p class="role">Stay connected</p>
+      <h2>Receive New Teachings</h2>
+      <div class="bar"></div>
+      <p>Be the first to know when a new article or teaching is published. No noise, just truth.</p>
+      <a class="btn btn-yellow" href="mailto:info@cacmiraclecenter.org?subject=Subscribe%20to%20new%20teachings">Subscribe by email</a>
+      <p>No spam. Unsubscribe anytime by contacting us.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Christ Apostolic Church · Miracle Centre</b></p>
+    <p>A Spirit-filled, Word-grounded congregation committed to worship, discipleship, and the transformation of lives through the gospel of Jesus Christ.</p>
+    <p>One Fold, One Shepherd &middot; John 10:16</p>
+    <p>&copy; <span id="year"></span> All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form -> opens the visitor's email app with the message filled in
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const reason = document.getElementById('reason').value;
+    const msg = document.getElementById('msg').value;
+    const body = `Name: ${firstName} ${lastName}\nEmail: ${email}\nReason: ${reason}\n\n${msg}`;
+    window.location.href = 'mailto:info@cacmiraclecenter.org?subject=' +
+      encodeURIComponent(`${reason} - Website message`) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
