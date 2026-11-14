@@ -328,14 +328,14 @@
         <span class="service-time">7:00 p.m. - 8:30 p.m.</span>
         <p>Deeper study of Scripture in a warm, interactive setting. Come with your Bible and your questions.</p>
         <a class="detail-link" href="https://zoom.us/j/3476389063" target="_blank" rel="noopener noreferrer">Join on Zoom</a>
-        <p>Password: 8157</p>
+        <p>Please contact the church for the meeting passcode.</p>
       </article>
       <article class="service-card">
         <span class="service-frequency">Daily Prayer</span>
         <h3>Prayer Line</h3>
         <span class="service-time">7:00 p.m. - 8:00 p.m.</span>
         <p>A time of corporate prayer and intercession. Join us from anywhere as we seek God’s face together.</p>
-        <p><strong>Phone:</strong> <a class="detail-link" href="tel:+13126674791">+1 (312) 667-4791</a><br><strong>Password:</strong> 362397</p>
+        <p><strong>Phone:</strong> <a class="detail-link" href="tel:+13126674791">+1 (312) 667-4791</a><br>Please contact the church for the prayer line passcode.</p>
       </article>
       <article class="service-card">
         <span class="service-frequency">Last Friday of the month</span>
@@ -841,44 +841,6 @@
   </div>
 </footer>
 
-<script>
-  // Mobile menu
-  const btn = document.getElementById('menuBtn');
-  const nav = document.getElementById('nav');
-  btn.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
-  });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-  }));
-
-  const reasonSelect = document.getElementById('reason');
-  const sendContactButton = document.getElementById('sendContactButton');
-  reasonSelect.addEventListener('change', () => {
-    sendContactButton.textContent = reasonSelect.value === 'Biblical question'
-      ? 'Send biblical question →'
-      : 'Send message →';
-  });
-
-  // Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Contact form -> opens the visitor's email app with the message filled in
-  document.getElementById('contactForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const reason = reasonSelect.value;
-    const msg = document.getElementById('msg').value;
-    const body = `Name: ${firstName} ${lastName}\nEmail: ${email}\nReason: ${reason}\n\n${msg}`;
-    window.location.href = 'mailto:info@cacmiraclecenter.org?subject=' +
-      encodeURIComponent(reason === 'Biblical question'
-        ? 'Biblical Question - Website message'
-        : `${reason} - Website message`) + '&body=' + encodeURIComponent(body);
-  });
-</script>
+<script src="script.js" defer></script>
 </body>
 </html>
