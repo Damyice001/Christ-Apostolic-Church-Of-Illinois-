@@ -3,146 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CAC Miracle Centre South Exchange | Christ Apostolic Church</title>
-<meta name="description" content="Christ Apostolic Church Miracle Centre South Exchange is a Spirit-filled, Word-grounded congregation committed to worship, discipleship, and the gospel of Jesus Christ.">
+<title>Christ Apostolic Church Of Illinois</title>
+<meta name="description" content="Christ Apostolic Church of illinios is a Spirit-filled, Word-grounded congregation committed to worship, discipleship, and the gospel of Jesus Christ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --blue:#183875;
-    --blue-dark:#102954;
-    --blue-soft:#f2f5fa;
-    --yellow:#e8b84b;
-    --yellow-soft:#fbf5e8;
+    --primary:#102d5d;
+    --primary-deep:#0b1f3d;
+    --primary-soft:#edf4ff;
+    --secondary:#c79b42;
+    --secondary-soft:#f6edd7;
+    --background:#f7f3eb;
+    --surface:#fffdf9;
+    --surface-strong:#f1eadc;
+    --text:#1f2c3d;
+    --muted:#5d6879;
+    --heading:#102d5d;
     --white:#ffffff;
-    --ink:#16203d;
-    --muted:#55607f;
+    --line:rgba(16,45,93,.12);
+    --shadow:0 18px 44px rgba(11,31,61,.12);
+    --shadow-soft:0 10px 24px rgba(11,31,61,.08);
+    --success:#2f6f52;
+    --warning:#dca938;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Nunito Sans',Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
-  h1,h2,h3{font-family:'Lora',Georgia,serif;line-height:1.2}
+  body{font-family:'Open Sans',Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f7f3eb 0%,#f0ede7 100%);line-height:1.7;font-size:17px}
+  h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif;line-height:1.15;letter-spacing:-.02em;color:var(--heading)}
+  p{color:var(--text);line-height:1.8}
   a{color:inherit}
   img{max-width:100%;display:block}
-  .wrap{width:min(1100px,92%);margin-inline:auto}
-  :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+  .wrap{width:min(1120px,92%);margin-inline:auto}
+  :focus-visible{outline:3px solid var(--secondary);outline-offset:3px}
+  main{overflow:hidden}
+  ::selection{background:rgba(232,184,75,.28)}
 
   /* Header */
-  header{position:sticky;top:0;z-index:50;background:var(--blue);box-shadow:0 3px 14px rgba(16,41,84,.14)}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:16px}
+  header{position:sticky;top:0;z-index:50;background:rgba(11,31,61,.96);backdrop-filter:blur(10px);box-shadow:0 8px 22px rgba(11,31,61,.18);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
-  .brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;border:2px solid var(--yellow)}
-  .brand span{font-family:'Lora',serif;font-weight:700;font-size:1.05rem;line-height:1.15}
-  .brand small{display:block;font-family:'Nunito Sans',sans-serif;font-weight:400;font-size:.78rem;color:var(--yellow)}
-  nav ul{display:flex;gap:22px;list-style:none}
-  nav a{color:var(--white);text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
-  nav a:hover{border-color:var(--yellow)}
-  .menu-btn{display:none;background:none;border:2px solid var(--yellow);color:var(--white);border-radius:8px;padding:6px 12px;font-size:1rem;cursor:pointer}
+  .brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;border:2px solid var(--secondary);box-shadow:0 8px 16px rgba(0,0,0,.12)}
+  .brand span{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.05rem;line-height:1.15}
+  .brand small{display:block;font-family:'Open Sans',sans-serif;font-weight:600;font-size:.78rem;color:var(--secondary-soft)}
+  nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+  nav a{color:var(--white);text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 0;border-bottom:2px solid transparent;transition:border-color .15s,color .15s}
+  nav a:hover{border-color:var(--secondary);color:#f6efdc}
+  .menu-btn{display:none;background:none;border:2px solid var(--secondary);color:var(--white);border-radius:10px;padding:8px 12px;font-size:1rem;cursor:pointer}
 
   /* Hero */
-  .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);color:var(--white);padding:84px 0;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-100px;top:-190px}
+  .hero{background:linear-gradient(90deg,rgba(11,31,61,.92) 0%,rgba(11,31,61,.74) 58%,rgba(11,31,61,.58) 100%),url("church-background.png") center 52%/cover no-repeat;color:var(--white);padding:100px 0 82px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(199,155,66,.18),transparent 32%);pointer-events:none}
+  .hero::after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-110px;top:-180px}
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:1}
-  .hero h1{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:10px}
-  .hero h1 em{font-style:normal;color:var(--yellow)}
-  .verse{display:inline-block;color:#f5d991;font-weight:700;padding:0;margin-bottom:18px;letter-spacing:.12em;text-transform:uppercase;font-size:.83rem}
-  .hero p{max-width:52ch;color:#e0e7f2;margin-bottom:28px;font-size:1.08rem}
+  .hero h1{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:12px;line-height:1.08;color:var(--white)}
+  .hero h1 em{font-style:normal;color:var(--secondary)}
+  .verse{display:inline-block;color:var(--secondary-soft);font-weight:700;padding:0;margin-bottom:18px;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+  .hero p{max-width:52ch;color:#edf1fb;margin-bottom:30px;font-size:1.08rem}
   .btns{display:flex;flex-wrap:wrap;gap:14px}
   .btns-centered{justify-content:center}
-  .btn{display:inline-block;padding:13px 26px;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
-  .btn-yellow{background:var(--yellow);color:var(--blue-dark)}
-  .btn-yellow:hover{background:#ffd95c;transform:translateY(-2px)}
-  .btn-outline{border:2px solid var(--white);color:var(--white)}
-  .btn-outline:hover{background:var(--white);color:var(--blue)}
-  .btn-outline-dark{border:2px solid var(--blue);color:var(--blue)}
-  .btn-outline-dark:hover{background:var(--blue);color:var(--white)}
-  .welcome-card{background:#fff;color:var(--ink);padding:42px;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.2);border-top:5px solid var(--yellow)}
-  .welcome-card .eyebrow{color:var(--blue);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
-  .welcome-card blockquote{font-family:'Lora',serif;font-size:1.65rem;line-height:1.45;margin:20px 0;color:var(--blue-dark)}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-yellow{background:linear-gradient(180deg,#d9b15c,#c9952d);color:var(--primary-deep);box-shadow:0 12px 24px rgba(199,155,66,.35)}
+  .btn-yellow:hover{background:linear-gradient(180deg,#e1c170,#d3a544)}
+  .btn-outline{border:1.5px solid rgba(255,255,255,.7);color:var(--white);background:rgba(255,255,255,.02)}
+  .btn-outline:hover{background:var(--white);color:var(--primary)}
+  .btn-outline-dark{border:1.5px solid rgba(16,45,93,.2);color:var(--primary);background:transparent}
+  .btn-outline-dark:hover{background:var(--primary);color:var(--white)}
+  .welcome-card{background:rgba(255,255,255,.96);color:var(--text);padding:36px 34px;border-radius:22px;box-shadow:0 28px 70px rgba(0,0,0,.18);border:1px solid rgba(16,45,93,.08);border-top:6px solid var(--secondary)}
+  .welcome-card .eyebrow{color:var(--primary);font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800}
+  .welcome-card blockquote{font-family:'Playfair Display',Georgia,serif;font-size:1.7rem;line-height:1.4;margin:22px 0 14px;color:var(--primary-deep)}
   .welcome-card cite{font-style:normal;color:var(--muted);font-weight:700}
-
   /* Sections */
-  section{padding:80px 0}
+  section{padding:82px 0}
   .title{text-align:center;margin-bottom:46px}
-  .title h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--blue)}
-  .title .bar{width:54px;height:3px;background:var(--yellow);margin:14px auto 0;border-radius:3px}
-  .title p{color:var(--muted);margin-top:14px}
+  .title h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--blue)}
+  .title .bar{width:60px;height:4px;background:linear-gradient(90deg,var(--yellow),#f6cf6e);margin:14px auto 0;border-radius:999px}
+  .title p{color:var(--muted);margin-top:14px;max-width:720px;margin-inline:auto}
 
   /* Welcome */
-  .about{max-width:800px}
-  .about h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--blue);margin-bottom:18px}
-  .about .role{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;margin-bottom:12px}
-  .about p{margin-bottom:14px}
+  .about{max-width:820px;background:linear-gradient(180deg,#183875 0%,#102954 100%);padding:28px 26px;border-radius:22px;border:1px solid rgba(255,255,255,.15);box-shadow:var(--shadow-soft);color:var(--white)}
+  .about h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--white);margin-bottom:18px}
+  .about .role{color:#f5d991;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;margin-bottom:12px}
+  .about p{margin-bottom:16px;color:rgba(255,255,255,.94)}
   .contact-chip{display:inline-flex;align-items:center;gap:10px;background:var(--blue-soft);color:var(--blue);padding:10px 18px;border-radius:999px;font-weight:700;text-decoration:none;margin-top:8px}
 
   /* Announcements */
-  .announcements{background:var(--blue-soft)}
-  .announcement-card{max-width:820px;margin-inline:auto;padding:30px 34px;background:var(--white);border-left:4px solid var(--yellow);border-radius:0 10px 10px 0;box-shadow:0 10px 28px rgba(16,41,84,.06)}
-  .announcement-date{display:inline-block;margin-bottom:18px;color:var(--blue);font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .announcements{background:linear-gradient(180deg,#f0f5ff 0%,#edf3ff 100%)}
+  .announcement-card{max-width:860px;margin-inline:auto;padding:30px 34px;background:var(--panel);border-left:5px solid var(--yellow);border-radius:18px;box-shadow:var(--shadow-soft);border:1px solid rgba(24,56,117,.06)}
+  .announcement-date{display:inline-block;margin-bottom:18px;color:var(--blue);font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
   .announcement-card p{margin-bottom:14px}
   .announcement-card h3{color:var(--blue);font-size:1.15rem;margin:22px 0 8px}
   .announcement-card ul{padding-left:22px}
   .announcement-card li{padding-left:4px;margin-bottom:10px}
   .announcement-card li:last-child{margin-bottom:0}
-  .social-icon{width:22px;height:22px;vertical-align:middle;margin-right:6px}
+  .social-icon{width:22px;height:22px;vertical-align:middle;margin-right:8px}
   @media (max-width:600px){.announcement-card{padding:24px 22px}}
 
   /* Services */
-  .services{background:var(--blue-soft)}
-  .service-grid,.doctrine-grid,.teaching-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-  .service-card,.doctrine-card,.teaching-card{background:var(--white);padding:26px;border-radius:12px;border:1px solid #e2e8f1;box-shadow:0 10px 26px rgba(16,41,84,.05)}
-  .service-card h3,.doctrine-card h3,.teaching-card h3{color:var(--blue);font-size:1.2rem;margin:6px 0 10px}
+  .services{background:linear-gradient(180deg,#f5f8ff 0%,#edf1fa 100%)}
+  .service-grid,.doctrine-grid,.teaching-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .service-card,.doctrine-card,.teaching-card{background:var(--panel);padding:28px 24px;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease}
+  .service-card:hover,.doctrine-card:hover,.teaching-card:hover,.giving-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service-card h3,.doctrine-card h3,.teaching-card h3{color:var(--blue);font-size:1.2rem;margin:10px 0 12px}
   .service-card p,.doctrine-card p,.teaching-card p{color:var(--muted);margin-bottom:10px}
-  .giving{background:var(--white)}
-  .giving-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-  .giving-card{background:var(--blue-soft);padding:26px;border-radius:12px;border-top:4px solid var(--yellow)}
+  .giving{background:var(--panel)}
+  .giving-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .giving-card{background:linear-gradient(180deg,#f7faff 0%,#edf3ff 100%);padding:28px 24px;border-radius:18px;border-top:5px solid var(--yellow);box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease}
   .giving-card h3{color:var(--blue);font-size:1.2rem;margin-bottom:12px}
-  .giving-card p{margin-bottom:10px}
+  .giving-card p{margin-bottom:10px;color:var(--muted)}
   .giving-card a{color:var(--blue);font-weight:700}
-  .giving-thanks{margin:28px auto 0;text-align:center;color:var(--muted);font-family:'Lora',Georgia,serif;font-size:1.2rem}
-  .service-frequency{color:var(--blue);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-  .service-time{display:block;color:var(--blue-dark);font-weight:700;margin-bottom:10px}
+  .giving-thanks{margin:30px auto 0;text-align:center;color:var(--muted);font-family:'Lora',Georgia,serif;font-size:1.22rem}
+  .service-frequency{display:inline-block;color:var(--blue);font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:rgba(24,56,117,.06);padding:7px 10px;border-radius:999px}
+  .service-time{display:block;color:var(--blue-dark);font-weight:800;margin:12px 0 8px}
   .detail-link,.teaching-card a{color:var(--blue);font-weight:700}
   .service-note{margin-top:24px;text-align:center;color:var(--muted)}
 
   /* Beliefs */
-  .doctrine-card{border-top:4px solid var(--yellow)}
+  .doctrine-card{border-top:5px solid var(--yellow)}
 
   /* Pastor and teachings */
-  .pastor{max-width:850px;margin-inline:auto;background:var(--blue-soft);padding:34px;border-radius:14px}
+  .pastor{max-width:850px;margin-inline:auto;background:rgba(255,255,255,.75);padding:36px 32px;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow-soft)}
+  .pastor-layout{display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:28px;align-items:start}
+  .pastor-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:0 18px 34px rgba(16,41,84,.14)}
+  .pastor-content{min-width:0}
   .pastor h3{color:var(--blue);font-size:1.55rem;margin:8px 0}
-  .pastor .role{color:var(--muted);font-weight:700}
-  .pastor p{margin:14px 0}
-  .teachings{background:var(--blue-soft)}
+  .pastor .role{color:var(--muted);font-weight:800}
+  .pastor p{margin:14px 0;color:var(--ink)}
+  .teachings{background:linear-gradient(180deg,#f2f6ff 0%,#edf3fb 100%)}
   .teaching-card{display:flex;flex-direction:column;align-items:flex-start}
   .teaching-card a{margin-top:auto}
   .teaching-card .reading-time{font-size:.9rem;color:var(--muted);margin-top:8px}
 
   /* Verse banner */
-  .banner{background:var(--blue);color:var(--white);text-align:center;padding:70px 0}
-  .banner blockquote{font-family:'Lora',serif;font-size:clamp(1.3rem,3vw,1.9rem);max-width:30em;margin:0 auto 12px}
-  .banner cite{color:var(--yellow);font-style:normal;font-weight:700}
+  .banner{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-deep) 100%);color:var(--white);text-align:center;padding:72px 0;position:relative;overflow:hidden}
+  .banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(199,155,66,.18),transparent 38%);pointer-events:none}
+  .banner blockquote{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,3vw,2.2rem);max-width:34em;margin:0 auto 12px;position:relative;z-index:1;line-height:1.4;color:var(--white)}
+  .banner cite{color:var(--secondary-soft);font-style:normal;font-weight:700;position:relative;z-index:1}
 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
   .info{display:grid;gap:18px}
-  .info-item{display:flex;gap:16px;align-items:center;padding:20px;border-radius:10px;background:var(--blue-soft);text-decoration:none}
-  .icon{flex:none;width:50px;height:50px;border-radius:50%;background:var(--blue);color:var(--yellow);display:grid;place-items:center;font-size:1.3rem}
+  .info-item{display:flex;gap:16px;align-items:center;padding:20px;border-radius:15px;background:var(--blue-soft);text-decoration:none;border:1px solid rgba(24,56,117,.05)}
+  .icon{flex:none;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue) 0%,#234e97 100%);color:var(--yellow);display:grid;place-items:center;font-size:1.3rem;box-shadow:0 12px 18px rgba(24,56,117,.15)}
   .info-item b{display:block;color:var(--blue)}
   .info-item span{color:var(--muted);word-break:break-word}
-  .address-panel{background:var(--blue-soft);padding:24px;border-radius:10px}
+  .address-panel{background:linear-gradient(180deg,#f5f8ff 0%,#edf3ff 100%);padding:24px;border-radius:15px;border:1px solid rgba(24,56,117,.06)}
   .address-panel h3{color:var(--blue);margin-bottom:8px}
-  .address-panel p{margin-bottom:8px}
+  .address-panel p{margin-bottom:8px;color:var(--muted)}
   .address-panel a{color:var(--blue);font-weight:700}
-  form{background:var(--white);border:1px solid #dce3ee;border-radius:14px;padding:28px;display:grid;gap:14px;box-shadow:0 12px 34px rgba(16,41,84,.07)}
-  label{font-weight:700;color:var(--blue);font-size:.92rem}
-  input,textarea,select{width:100%;padding:12px 14px;border:2px solid #c6d2f5;border-radius:8px;font:inherit;margin-top:4px;background:#fff;color:var(--ink)}
-  input:focus,textarea:focus,select:focus{border-color:var(--blue);outline:none}
+  form{background:var(--white);border:1px solid rgba(24,56,117,.1);border-radius:18px;padding:28px;display:grid;gap:14px;box-shadow:var(--shadow-soft)}
+  label{font-weight:800;color:var(--blue);font-size:.92rem}
+  input,textarea,select{width:100%;padding:12px 14px;border:1.5px solid #cdd8ee;border-radius:10px;font:inherit;margin-top:4px;background:#fff;color:var(--ink);transition:border-color .15s ease,box-shadow .15s ease}
+  input:focus,textarea:focus,select:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px rgba(24,56,117,.08)}
   textarea{min-height:120px;resize:vertical}
   form button{border:none;cursor:pointer;font:inherit;font-weight:700}
 
-  footer{background:var(--blue-dark);color:#c7d3ff;text-align:center;padding:34px 0;border-top:6px solid var(--yellow);font-size:.95rem}
+  footer{background:linear-gradient(180deg,#102954 0%,#0d2147 100%);color:#dfe8ff;text-align:center;padding:34px 0;border-top:6px solid var(--yellow);font-size:.95rem}
   footer b{color:var(--yellow)}
 
   /* Mobile */
@@ -156,6 +174,11 @@
     nav a{display:block;padding:12px 0}
     section{padding:60px 0}
   }
+  @media (max-width:600px){
+    .pastor{padding:24px}
+    .pastor-layout{grid-template-columns:1fr}
+    .pastor-photo{max-width:240px;margin-inline:auto}
+  }
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -165,7 +188,7 @@
   <div class="wrap nav">
     <a class="brand" href="#home">
       <img src="logo.png" alt="Christ Apostolic Church logo">
-      <span>CAC Miracle Centre<small>South Exchange · One Fold, One Shepherd</small></span>
+      <span>Christ Apostolic Church of Illinois<small>One Fold, One Shepherd</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
     <nav id="nav" aria-label="Main">
@@ -174,6 +197,16 @@
         <li><a href="#welcome">Who We Are</a></li>
         <li><a href="#announcements">Announcements</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#karma-department">CACMA (Men of faith)</a></li>
+        <li><a href="#good-women-department">Good women</a></li>
+        <li><a href="#christian-education">Christian Education</a></li>
+        <li><a href="#youth-department">Youth</a></li>
+        <li><a href="#medical-department">Medical Department</a></li>
+        <li><a href="#outreach-department">Outreach</a></li>
+        <li><a href="#choir-department">Choir</a></li>
+        <li><a href="#business-group">Business Group</a></li>
+        <li><a href="#scripture-department">Scripture</a></li>
+        <li><a href="#welfare-department">Welfare Department</a></li>
         <li><a href="#giving">Tithes &amp; Offerings</a></li>
         <li><a href="#beliefs">Our Doctrine</a></li>
         <li><a href="#pastor">Pastor</a></li>
@@ -189,7 +222,7 @@
   <div class="wrap hero-grid">
     <div>
       <span class="verse">Welcome to our church</span>
-      <h1>CAC <em>Miracle Centre</em></h1>
+      <h1>Christ Apostolic Church of <em>Illinois</em></h1>
       <p>A vibrant, Spirit-filled congregation rooted in faith and love. Join us for worship, prayer, and the full gospel of Jesus Christ at South Exchange.</p>
       <div class="btns">
         <a class="btn btn-yellow" href="#services">Gather with us</a>
@@ -251,13 +284,14 @@
       <ul>
         <li><strong>CACMA October Vigil:</strong> Friday, October 30, from 11:00 p.m. to 1:00 a.m.</li>
         <li><strong>Special Thanksgiving:</strong> We pray for and support our Mama, Matron Margret Omodara, as she prepares for her special thanksgiving on November 8, 2026.</li>
-        <li><strong>Church Anniversary:</strong> Sunday, November 15. CAC Miracle Center South Exchange, let us prepare spiritually, physically, and financially for the anniversary. It shall be a glorious day in Jesus’ name.</li>
+        <li><strong>50th Church Anniversary:</strong> This Sunday, November 15, 2026. CAC Miracle Center South Exchange, let us prepare spiritually, physically, and financially for this glorious 50th anniversary celebration in Jesus’ name.</li>
       </ul>
       <h3>Weekly gatherings</h3>
       <ul>
         <li><strong>Daily prayer line:</strong> Monday to Friday, 7:00–8:00 p.m. Join us and send in your prayer requests.</li>
         <li><strong>Bible study:</strong> Wednesdays on Zoom, 7:00–8:30 p.m. Invite your friends and family to join us as we learn and grow in understanding.</li>
         <li><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="#ff0033"/><path d="M10 9v6l5-3z" fill="#fff"/></svg><strong>YouTube live stream:</strong> Join us live on YouTube at <a href="https://www.youtube.com/@cacsouthexchange" target="_blank" rel="noopener noreferrer">@cacsouthexchange</a>.</li>
+        <li><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="#1877f2"/><path d="M13.6 20v-7.2h2.4l.4-2.8h-2.8V7.4c0-.8.2-1.4 1.4-1.4H16V3.4c-.4-.1-1.4-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7v2.8h2.3V20h4.3z" fill="#fff"/></svg><strong>Facebook:</strong> Daily CAC News Worldwide at <a href="https://www.facebook.com/CacMembersWorldwide" target="_blank" rel="noopener noreferrer">Cac Members worldwide</a>.</li>
         <li><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="instagramGradient" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd776"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#833ab4"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#instagramGradient)" stroke-width="2.5"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#instagramGradient)" stroke-width="2.2"/><circle cx="17.8" cy="6.5" r="1.35" fill="#e1306c"/></svg><strong>Instagram:</strong> Follow us at <a href="https://www.instagram.com/cacsouthexchange_church/" target="_blank" rel="noopener noreferrer">@cacsouthexchange_church</a>.</li>
       </ul>
       <h3>Welcome, newcomers</h3>
@@ -277,41 +311,345 @@
       <article class="service-card">
         <span class="service-frequency">Every Sunday</span>
         <h3>Sunday Worship Service</h3>
-        <span class="service-time">10:00 a.m. &amp; 1:30 p.m.</span>
+        <span class="service-time">10:30 a.m. - 1:00 p.m.</span>
         <p>Our main gathering — Spirit-led praise, heartfelt worship, and expository preaching from the Word of God.</p>
       </article>
       <article class="service-card">
         <span class="service-frequency">Every Wednesday</span>
-        <h3>Midweek Bible Study</h3>
-        <span class="service-time">6:00 p.m.</span>
+        <h3>Bible Study</h3>
+        <span class="service-time">7:00 p.m. - 8:30 p.m.</span>
         <p>Deeper study of Scripture in a warm, interactive setting. Come with your Bible and your questions.</p>
         <a class="detail-link" href="https://zoom.us/j/3476389063" target="_blank" rel="noopener noreferrer">Join on Zoom</a>
         <p>Password: 8157</p>
       </article>
       <article class="service-card">
-        <span class="service-frequency">Monday–Friday</span>
+        <span class="service-frequency">Daily Prayer</span>
         <h3>Prayer Line</h3>
-        <span class="service-time">7:00–8:00 p.m.</span>
+        <span class="service-time">7:00 p.m. - 8:00 p.m.</span>
         <p>A time of corporate prayer and intercession. Join us from anywhere as we seek God’s face together.</p>
         <p><strong>Phone:</strong> <a class="detail-link" href="tel:+13126674791">+1 (312) 667-4791</a><br><strong>Password:</strong> 362397</p>
       </article>
       <article class="service-card">
-        <span class="service-frequency">Sundays at 8:00 a.m.</span>
-        <h3>Children &amp; Youth Church</h3>
-        <span class="service-time">Before the main service</span>
-        <p>A dedicated, Bible-centred space for the next generation — age-appropriate and Spirit-led.</p>
+        <span class="service-frequency">Last Friday of the month</span>
+        <h3>CACMA Vigil</h3>
+        <span class="service-time">11:00 p.m. - 1:00 a.m.</span>
+        <p>A night of prayer, intercession, and spiritual renewal for the men of faith.</p>
       </article>
       <article class="service-card">
-        <span class="service-frequency">Every last Friday</span>
-        <h3>Men’s Night Vigil Prayer Service</h3>
-        <span class="service-time">12:00–1:00 a.m.</span>
-        <p>A night set apart for intercession, spiritual warfare, and waiting on God. All are welcome.</p>
+        <span class="service-frequency">Sundays</span>
+        <h3>Youth Service</h3>
+        <span class="service-time">8:30 a.m. - 10:00 a.m.</span>
+        <p>A dedicated, Bible-centred space for the next generation — age-appropriate and Spirit-led.</p>
+      </article>
+
+      <article class="service-card">
+        <span class="service-frequency">Sundays</span>
+        <h3>Sunday School</h3>
+        <span class="service-time">10:00 a.m. - 10:30 a.m.</span>
+        <p>Scripture-centered teaching and discipleship for all ages.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">1st Sunday of the month</span>
+        <h3>Open Heaven Service</h3>
+        <span class="service-time">10:30 a.m. - 1:30 p.m.</span>
+        <p>A special day of worship, prayer, and divine encounters as we seek God’s presence and move in faith.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Special Sunday Service</span>
+        <h3>Communion Service</h3>
+        <span class="service-time">10:30 a.m. - 1:30 p.m.</span>
+        <p>We gather to reflect on the love of Christ, remember His sacrifice, and partake in the Lord’s Supper together.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">3rd Sunday</span>
+        <h3>Family Sunday</h3>
+        <span class="service-time">10:00 a.m. - 1:30 p.m.</span>
+        <p>A time for church families to worship together, strengthen bonds, and celebrate God’s faithfulness as one family in Christ.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Every quarter</span>
+        <h3>Praise &amp; Worship Sunday</h3>
+        <span class="service-time">10:00 a.m. - 1:30 p.m.</span>
+        <p>A time of joyful worship, heartfelt praise, and spiritual refreshment as we celebrate God’s goodness.</p>
       </article>
       <article class="service-card">
         <span class="service-frequency">Quarterly</span>
         <h3>Evangelism &amp; Outreach</h3>
         <span class="service-time">Dates announced Sundays</span>
         <p>Taking the gospel beyond these walls — into our neighbourhood and the wider community.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="karma-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>CACMA <span style="display:block; font-size: 0.8em; color: var(--blue); margin-top: 8px;">Men of faith</span></h2>
+      <div class="bar"></div>
+      <p>The CACMA (Men of faith) is committed to supporting the church family through care, prayer, and practical involvement.</p>
+      <p><strong>Leader:</strong> Deacon Adesola &nbsp;|&nbsp; <strong>Assistant:</strong> Mr. Karmal Jusuf &nbsp;|&nbsp; <strong>Treasurer:</strong> Mr. Oleun Saliko</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Care &amp; Support</span>
+        <h3>Pastoral Follow-Up</h3>
+        <p>We stand with members in times of need, offering encouragement, prayer support, and spiritual guidance.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Community</span>
+        <h3>Fellowship &amp; Unity</h3>
+        <p>We help build a stronger church family by promoting connection, love, and mutual responsibility among members.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Service</span>
+        <h3>Practical Help</h3>
+        <p>From visits to assistance in times of difficulty, the department serves with compassion and purpose.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="good-women-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Good women</h2>
+      <div class="bar"></div>
+      <p>The Good women is a spiritual and supportive arm of the church, helping women grow in faith, character, and service.</p>
+      <p><strong>Leader:</strong> Deaconess Julie Godfreg &nbsp;|&nbsp; <strong>Assistant:</strong> Mrs. Olaide Osibogun &nbsp;|&nbsp; <strong>Secretary:</strong> Mrs. Temitope Bayo &nbsp;|&nbsp; <strong>Treasurer:</strong> Mrs. Bola Hashin</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Spiritual Growth</span>
+        <h3>Prayer &amp; Devotion</h3>
+        <p>We encourage women to grow in intimacy with God through prayer, Scripture, and consistent spiritual discipline.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Fellowship</span>
+        <h3>Unity &amp; Support</h3>
+        <p>We create a safe and loving environment where women can encourage one another, share burdens, and walk in love.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Service</span>
+        <h3>Impact &amp; Care</h3>
+        <p>Through outreach, hospitality, and practical support, we demonstrate the heart of Christ to the community and church family.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="christian-education">
+  <div class="wrap">
+    <div class="title">
+      <h2>Christian Education</h2>
+      <div class="bar"></div>
+      <p>We believe in the lifelong growth of believers through sound biblical teaching, discipleship, and Christ-centered learning.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Every Sunday</span>
+        <h3>Sunday School</h3>
+        <p>Join us for vibrant Bible teaching and scriptural instruction for all ages, helping believers grow in knowledge, faith, and practical Christian living.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Discipleship</span>
+        <h3>Bible Study</h3>
+        <p>We equip members to understand the Word of God deeply and apply it faithfully in everyday life.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Growth</span>
+        <h3>Spiritual Development</h3>
+        <p>Our Christian education ministry helps believers mature in wisdom, character, service, and obedience to Christ.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="youth-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Youth</h2>
+      <div class="bar"></div>
+      <p>The Youth Department is dedicated to helping young people grow in faith, purpose, and godly character.</p>
+      <p><strong>Youth Leader:</strong> Sister Damola Adesola &nbsp;|&nbsp; <strong>Assistant:</strong> Deborah Hassan &nbsp;|&nbsp; <strong>Secretary:</strong> Grace Aina &nbsp;|&nbsp; <strong>Treasurer:</strong> Favor Babatunde</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Spiritual Growth</span>
+        <h3>Discipleship</h3>
+        <p>We guide young believers to know Christ deeply, live with conviction, and grow in holiness and wisdom.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Fellowship</span>
+        <h3>Community &amp; Connection</h3>
+        <p>Our youth ministry creates a welcoming space for friendship, encouragement, and genuine belonging in Christ.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Service</span>
+        <h3>Leadership &amp; Impact</h3>
+        <p>We equip the next generation to serve, lead, and impact their families, church, and communities for God.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="medical-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Medical Department</h2>
+      <div class="bar"></div>
+      <p>The Medical Department exists to care for the physical and emotional well-being of our church family with compassion and professionalism.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Care</span>
+        <h3>Health Support</h3>
+        <p>We provide encouragement, support, and practical guidance to members in times of illness, recovery, and health concerns.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Compassion</span>
+        <h3>Pastoral Care</h3>
+        <p>Our team works with the church family to offer timely assistance, prayer, and emotional support during difficult seasons.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Service</span>
+        <h3>Wellness &amp; Advocacy</h3>
+        <p>We promote wellness, awareness, and practical care that reflects the love and compassion of Christ.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="outreach-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Outreach</h2>
+      <div class="bar"></div>
+      <p>The Outreach is committed to taking the gospel of Jesus Christ beyond the church walls into our communities and beyond.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Mission</span>
+        <h3>Evangelism</h3>
+        <p>We reach out to the lost, share the good news of salvation, and invite people into a life-changing relationship with Christ.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Community</span>
+        <h3>Service &amp; Support</h3>
+        <p>We meet practical needs through acts of kindness, compassion, and support for families and individuals in our neighborhoods.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Impact</span>
+        <h3>Kingdom Extension</h3>
+        <p>Our outreach ministry reflects the heart of Christ by building hope, healing, and restoration wherever God sends us.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="choir-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Choir</h2>
+      <div class="bar"></div>
+      <p>The Choir leads the church in worship with spirit-filled music, harmony, and heartfelt praise to God.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Worship</span>
+        <h3>Spirit-Led Praise</h3>
+        <p>We lift our voices in worship, ministering to the Lord and creating an atmosphere of reverence and joy.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Unity</span>
+        <h3>Harmonious Fellowship</h3>
+        <p>Through music and teamwork, the choir blends talent, devotion, and service to glorify God together.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Ministry</span>
+        <h3>Leading Worship</h3>
+        <p>Our ministry helps set the tone for prayer, praise, and spiritual encounter during worship services and special events.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="business-group">
+  <div class="wrap">
+    <div class="title">
+      <h2>Business Group</h2>
+      <div class="bar"></div>
+      <p>The Business Group brings together members in commerce and professional life to fellowship, pray, and support one another in Christ.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Fellowship</span>
+        <h3>Unity in Purpose</h3>
+        <p>We connect Christian professionals and entrepreneurs to build meaningful relationships rooted in faith and accountability.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Support</span>
+        <h3>Mutual Encouragement</h3>
+        <p>Members share ideas, challenges, wisdom, and prayer support as they pursue excellence in their careers and callings.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Impact</span>
+        <h3>Kingdom Influence</h3>
+        <p>We seek to honor God in business and work, using our influence to bless families, communities, and the church.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="scripture-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Scripture</h2>
+      <div class="bar"></div>
+      <p>The Scripture is committed to helping the church grow in biblical understanding, truth, and practical application of God’s Word.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Teaching</span>
+        <h3>Word Study</h3>
+        <p>We encourage believers to study the Scriptures with clarity, depth, and spiritual insight for personal and communal growth.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Discipleship</span>
+        <h3>Scriptural Growth</h3>
+        <p>Through teaching and discussion, members are strengthened in sound doctrine and faithful living.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Application</span>
+        <h3>Life Transformation</h3>
+        <p>We help believers apply the Word to daily life, character, decisions, and service to God and others.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="welfare-department">
+  <div class="wrap">
+    <div class="title">
+      <h2>Welfare Department</h2>
+      <div class="bar"></div>
+      <p>The Welfare Department serves with compassion, providing practical support and encouragement to members and families in need.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-frequency">Support</span>
+        <h3>Food Pantry</h3>
+        <p>We provide food assistance to families facing hardship, helping meet immediate practical needs with dignity and love.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Care</span>
+        <h3>Relief &amp; Assistance</h3>
+        <p>Through prayer, visitation, and support, we stand with members during periods of financial, emotional, and spiritual need.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-frequency">Service</span>
+        <h3>Compassionate Outreach</h3>
+        <p>We demonstrate the love of Christ by sharing resources, encouragement, and practical help in times of difficulty.</p>
       </article>
     </div>
   </div>
@@ -375,14 +713,19 @@
       <div class="bar"></div>
     </div>
     <article class="pastor">
-      <p class="role">Spiritual Leader · CAC Miracle Centre</p>
-      <h3>Dr. Joshua Owoeye</h3>
-      <p>Dr. Joshua Owoeye is the Spiritual Leader of CAC Miracle Centre and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life's work has been teaching the whole counsel of God's Word — with conviction, clarity, and pastoral compassion.</p>
-      <p>His passion is the making of true disciples: believers who are not just spiritually enthusiastic, but deeply grounded in Scripture, holy in character, and effective in service to God and neighbour.</p>
-      <p>Dr. Owoeye is also a prolific author and teacher whose writings on character, holiness, sin, leadership, and church accountability continue to impact lives across Nigeria and in the diaspora.</p>
-      <div class="btns">
-        <a class="btn btn-outline-dark" href="https://cacsemc-website.vercel.app/teachings/" target="_blank" rel="noopener noreferrer">Read his teachings</a>
-        <a class="btn btn-yellow" href="https://cacsemc-website.vercel.app/pastor/" target="_blank" rel="noopener noreferrer">Full biography</a>
+      <div class="pastor-layout">
+        <img class="pastor-photo" src="pastor-portrait.jpeg" alt="Dr. Joshua Owoeye">
+        <div class="pastor-content">
+          <p class="role">Spiritual Leader · Christ Apostolic Church of Illinois</p>
+          <h3>Dr. Joshua Owoeye</h3>
+          <p>Dr. Joshua Owoeye is the Spiritual Leader of Christ Apostolic Church of Illinois and a committed minister of the full gospel of Jesus Christ. With decades of ministry experience, his life's work has been teaching the whole counsel of God's Word — with conviction, clarity, and pastoral compassion.</p>
+          <p>His passion is the making of true disciples: believers who are not just spiritually enthusiastic, but deeply grounded in Scripture, holy in character, and effective in service to God and neighbour.</p>
+          <p>Dr. Owoeye is also a prolific author and teacher whose writings on character, holiness, sin, leadership, and church accountability continue to impact lives across Nigeria and in the diaspora.</p>
+          <div class="btns">
+            <a class="btn btn-outline-dark" href="https://cacsemc-website.vercel.app/teachings/" target="_blank" rel="noopener noreferrer">Read his teachings</a>
+            <a class="btn btn-yellow" href="https://cacsemc-website.vercel.app/pastor/" target="_blank" rel="noopener noreferrer">Full biography</a>
+          </div>
+        </div>
       </div>
     </article>
   </div>
@@ -454,13 +797,14 @@
             <option value="" selected disabled>Select a reason…</option>
             <option>Planning a visit</option>
             <option>Prayer request</option>
+            <option>Biblical question</option>
             <option>General enquiry</option>
             <option>Speaking / ministry invitation</option>
             <option>Other</option>
           </select>
         </div>
         <div><label for="msg">Message</label><textarea id="msg" name="message" required></textarea></div>
-        <button class="btn btn-yellow" type="submit">Send message →</button>
+        <button class="btn btn-yellow" id="sendContactButton" type="submit">Send message →</button>
       </form>
     </div>
   </div>
@@ -502,6 +846,14 @@
     btn.setAttribute('aria-expanded', 'false');
   }));
 
+  const reasonSelect = document.getElementById('reason');
+  const sendContactButton = document.getElementById('sendContactButton');
+  reasonSelect.addEventListener('change', () => {
+    sendContactButton.textContent = reasonSelect.value === 'Biblical question'
+      ? 'Send biblical question →'
+      : 'Send message →';
+  });
+
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -511,11 +863,13 @@
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
     const email = document.getElementById('email').value.trim();
-    const reason = document.getElementById('reason').value;
+    const reason = reasonSelect.value;
     const msg = document.getElementById('msg').value;
     const body = `Name: ${firstName} ${lastName}\nEmail: ${email}\nReason: ${reason}\n\n${msg}`;
     window.location.href = 'mailto:info@cacmiraclecenter.org?subject=' +
-      encodeURIComponent(`${reason} - Website message`) + '&body=' + encodeURIComponent(body);
+      encodeURIComponent(reason === 'Biblical question'
+        ? 'Biblical Question - Website message'
+        : `${reason} - Website message`) + '&body=' + encodeURIComponent(body);
   });
 </script>
 </body>
